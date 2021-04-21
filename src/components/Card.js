@@ -27,8 +27,7 @@ function employeeCard({image, name, phone, email, dob}){
         </ul>
       </div>
     </div>
-  )
+  ) 
 }
 
 export default employeeCard()
-export default Card 
