@@ -30,4 +30,4 @@ function employeeCard({image, name, phone, email, dob}){
   )
 }
 
-export default employeeCard
+export default employeeCard()
