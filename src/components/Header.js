@@ -6,7 +6,11 @@ import "../styles/Header.css";
 function Header() {
     return (
       <header className="header">
-        <h1>Welcome</h1>
+        <h1>Image</h1>
+        <hi>Name</hi>
+        <hi>Phone</hi>
+        <hi>Email</hi>
+        <hi>DOB</hi>
       </header>
     );
   }
