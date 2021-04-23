@@ -2,11 +2,12 @@ import React from "react";
 import API from "./API";
 import EmployeeTable from "./components/EmployeeTable";
 import Jumbo from "./components/Jumbo";
-import Moment from 'moment';
+
 
 class App extends React.Component {
   state = {
     employees: [],
+    search: "",
   };
 
   componentDidMount() {
@@ -22,27 +23,27 @@ class App extends React.Component {
     console.log(this.state);
     return (
       <>
-        <Jumbo />
-        <EmployeeTable employees={this.state.employees} />
+        <Jumbo handleInputChange={this.handleInputChange}/>
+        <EmployeeTable employees={this.state.employees.filter(this.filterEmployees)} />
       </>
     );
   };
-  
-  // constructor() {
-  
-  //   this.state = {
-  //     dateDMY: Moment("1994-07-01").format('DD-MM-YYYY'),
-  //   };
-  // };
-  
-//   render() {
-//     return (
-//       <div>
-//         <p> DMY Format: { this.state.dateDMY } </p>
-//       </div>
-//     );
-//   }
-// }
-}
+
+  handleInputChange = (e) => {
+    console.log(e.target.value);
+    const searchTerm = e.target.value;
+    this.setState({search: searchTerm});
+  }
+
+  filterEmployees = (employee) => {
+    if (employee.name.first.includes(this.state.search)) return true;
+    if (employee.name.last.includes(this.state.search)) return true;
+    if (employee.phone.includes(this.state.search)) return true;
+    if (employee.email.includes(this.state.search)) return true;
+    if (employee.dob.date.includes(this.state.search)) return true;
+
+    return false
+  } 
+  }
 
 export default App;
