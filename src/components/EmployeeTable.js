@@ -5,7 +5,7 @@ import moment from 'moment';
 
 
 function EmployeeTable({ employees }) {
-  const localEmployees = employees.length > 0 && employees
+  // const localEmployees = employees.length > 0 && employees
   return (
     <Container>
       <Table striped bordered hover>
@@ -22,7 +22,7 @@ function EmployeeTable({ employees }) {
           {employees.map(employee => {
             return(
           <tr>
-            <td><img src={employee.picture.medium}/></td>
+            <td><img src={employee.picture.medium} alt={employee.name.last}/></td>
             <td>{employee.name.first} {employee.name.last}</td>
             <td>{employee.phone}</td>
             <td>{employee.email}</td>
