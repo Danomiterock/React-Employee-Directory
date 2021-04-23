@@ -1,5 +1,8 @@
 import React from "react";
 import API from "./API";
+import EmployeeTable from "./components/EmployeeTable";
+import Jumbo from "./components/Jumbo";
+import Moment from 'moment';
 
 class App extends React.Component {
   state = {
@@ -17,8 +20,29 @@ class App extends React.Component {
 
   render() {
     console.log(this.state);
-    return <h1>Employees go here</h1>;
-  }
+    return (
+      <>
+        <Jumbo />
+        <EmployeeTable employees={this.state.employees} />
+      </>
+    );
+  };
+  
+  // constructor() {
+  
+  //   this.state = {
+  //     dateDMY: Moment("1994-07-01").format('DD-MM-YYYY'),
+  //   };
+  // };
+  
+//   render() {
+//     return (
+//       <div>
+//         <p> DMY Format: { this.state.dateDMY } </p>
+//       </div>
+//     );
+//   }
+// }
 }
 
 export default App;
