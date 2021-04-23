@@ -26,7 +26,7 @@ function EmployeeTable({ employees }) {
             <td>{employee.name.first} {employee.name.last}</td>
             <td>{employee.phone}</td>
             <td>{employee.email}</td>
-            <td>{moment(employee.dob.date).format('MM-DD-YYYY')}</td>
+            <td>{moment(employee.dob.date).format('MMMM Do, YYYY')}</td>
           </tr>
             )
           })}
