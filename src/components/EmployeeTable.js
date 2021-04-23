@@ -21,7 +21,7 @@ function EmployeeTable({ employees }) {
         <tbody>
           {employees.map(employee => {
             return(
-          <tr>
+          <tr key={employee.phone}>
             <td><img src={employee.picture.medium} alt={employee.name.last}/></td>
             <td>{employee.name.first} {employee.name.last}</td>
             <td>{employee.phone}</td>
