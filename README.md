@@ -74,3 +74,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### Links
 
 https://github.com/Danomiterock/React-Employee-Directory
+
+https://react-employee-directory-danomiteorck.netlify.app/
+
+![](src\image\image.jpg)
